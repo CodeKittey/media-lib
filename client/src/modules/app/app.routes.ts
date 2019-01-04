@@ -11,7 +11,7 @@ export const ROUTES: Routes = [
   {
     path: 'home',
     component: HomeComponent,
-  } /*,
+  },
   {
     path: 'graphic',
     loadChildren: '../graphic/graphic.module#GraphicModule',
@@ -19,6 +19,6 @@ export const ROUTES: Routes = [
   {
     path: 'audio',
     loadChildren: '../audio/audio.module#AudioModule',
-  }*/,
+  },
   { path: '**', component: PageNotFoundComponent },
 ];
