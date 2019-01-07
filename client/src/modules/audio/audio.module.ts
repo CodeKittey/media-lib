@@ -1,5 +1,4 @@
 import { NgModule, ModuleWithProviders } from '@angular/core';
-import { UiModule } from '../ui/ui.module';
 import { AUDIO_COMPONENTS } from './components';
 import { RouterModule } from '@angular/router';
 import { AUDIO_ROUTES } from './audio.routes';

@@ -6,10 +6,11 @@ import { APP_COMPONENTS } from './components';
 import { RouterModule } from '@angular/router';
 import { ROUTES } from './app.routes';
 import { APP_SERIVES } from './services';
+import { SharedModule } from '../shared/shared.modules';
 
 @NgModule({
     declarations: [...APP_COMPONENTS],
-    imports: [BrowserModule, RouterModule.forRoot(ROUTES), UiModule],
+    imports: [BrowserModule, RouterModule.forRoot(ROUTES), SharedModule.forRoot(), UiModule],
     providers: APP_SERIVES,
     bootstrap: [RootComponent]
 })
