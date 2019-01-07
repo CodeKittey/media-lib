@@ -1,0 +1,3 @@
+emconfigure cmake .
+
+emmake make
