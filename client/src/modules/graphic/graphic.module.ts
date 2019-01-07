@@ -7,15 +7,15 @@ import { GRAPHIC_SERIVES } from './services';
 import { GraphicListComponent } from './components/graphic-list/graphic-list.component';
 
 @NgModule({
-  declarations: [...GRAPHIC_COMPONENTS, GraphicListComponent],
-  imports: [RouterModule.forChild(GRAPHIC_ROUTES)],
-  providers: GRAPHIC_SERIVES,
+    declarations: [...GRAPHIC_COMPONENTS, GraphicListComponent],
+    imports: [RouterModule.forChild(GRAPHIC_ROUTES)],
+    providers: GRAPHIC_SERIVES
 })
 export class GraphicModule {
-  public static forRoot(): ModuleWithProviders {
-    return {
-      ngModule: GraphicModule,
-      providers: GRAPHIC_SERIVES,
-    };
-  }
+    public static forRoot(): ModuleWithProviders {
+        return {
+            ngModule: GraphicModule,
+            providers: GRAPHIC_SERIVES
+        };
+    }
 }

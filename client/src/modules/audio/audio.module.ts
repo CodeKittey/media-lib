@@ -6,14 +6,14 @@ import { AUDIO_ROUTES } from './audio.routes';
 import { AUDIO_SERIVES } from './services';
 
 @NgModule({
-  declarations: [...AUDIO_COMPONENTS],
-  imports: [RouterModule.forChild(AUDIO_ROUTES)],
+    declarations: [...AUDIO_COMPONENTS],
+    imports: [RouterModule.forChild(AUDIO_ROUTES)]
 })
 export class AudioModule {
-  public static forRoot(): ModuleWithProviders {
-    return {
-      ngModule: AudioModule,
-      providers: AUDIO_SERIVES,
-    };
-  }
+    public static forRoot(): ModuleWithProviders {
+        return {
+            ngModule: AudioModule,
+            providers: AUDIO_SERIVES
+        };
+    }
 }

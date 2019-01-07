@@ -3,21 +3,21 @@ import { BehaviorSubject, Observable } from 'rxjs';
 
 @Injectable()
 export class BlurService {
-  private readonly _onBlurChange = new BehaviorSubject<boolean>(false);
+    private readonly _onBlurChange = new BehaviorSubject<boolean>(false);
 
-  get onBlurChange(): Observable<boolean> {
-    return this._onBlurChange;
-  }
+    get onBlurChange(): Observable<boolean> {
+        return this._onBlurChange;
+    }
 
-  toggleBlur(): void {
-    this._onBlurChange.next(!this._onBlurChange.getValue());
-  }
+    toggleBlur(): void {
+        this._onBlurChange.next(!this._onBlurChange.getValue());
+    }
 
-  blurApplication(): void {
-    this._onBlurChange.next(true);
-  }
+    blurApplication(): void {
+        this._onBlurChange.next(true);
+    }
 
-  focusApplication(): void {
-    this._onBlurChange.next(false);
-  }
+    focusApplication(): void {
+        this._onBlurChange.next(false);
+    }
 }

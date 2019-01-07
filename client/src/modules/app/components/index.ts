@@ -6,10 +6,10 @@ import { PageNotFoundComponent } from './pagenotfound/page-not-found.component';
 import { NavigationComponent } from './navigation/navigation.component';
 
 export const APP_COMPONENTS = [
-  RootComponent,
-  HomeComponent,
-  HeaderComponent,
-  FooterComponent,
-  PageNotFoundComponent,
-  NavigationComponent,
+    RootComponent,
+    HomeComponent,
+    HeaderComponent,
+    FooterComponent,
+    PageNotFoundComponent,
+    NavigationComponent
 ];

@@ -4,10 +4,8 @@ import { CardComponent } from './components/card/card.component';
 import { OutsideClickDirective } from './directives/outside-click.directive';
 
 @NgModule({
-  declarations: [CardComponent, OutsideClickDirective],
-  exports: [CardComponent, OutsideClickDirective],
-  imports: [CommonModule],
+    declarations: [CardComponent, OutsideClickDirective],
+    exports: [CardComponent, OutsideClickDirective],
+    imports: [CommonModule]
 })
-export class UiModule {
-
-}
+export class UiModule {}
