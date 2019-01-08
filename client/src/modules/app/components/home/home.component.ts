@@ -13,6 +13,6 @@ export class HomeComponent implements OnInit {
     constructor(private readonly wasmService: WasmService) {}
 
     ngOnInit(): void {
-        this.fibnum$ = this.wasmService.fibonacci(20);
+        this.fibnum$ = this.wasmService.fibonacci(11);
     }
 }
