@@ -114,17 +114,44 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named binary
+# Target rules for targets named module
 
 # Build rule for target.
-binary: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 binary
-.PHONY : binary
+module: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 module
+.PHONY : module
 
 # fast build rule for target.
-binary/fast:
-	$(MAKE) -f CMakeFiles/binary.dir/build.make CMakeFiles/binary.dir/build
-.PHONY : binary/fast
+module/fast:
+	$(MAKE) -f CMakeFiles/module.dir/build.make CMakeFiles/module.dir/build
+.PHONY : module/fast
+
+src/fibonacci.o: src/fibonacci.c.o
+
+.PHONY : src/fibonacci.o
+
+# target to build an object file
+src/fibonacci.c.o:
+	$(MAKE) -f CMakeFiles/module.dir/build.make CMakeFiles/module.dir/src/fibonacci.c.o
+.PHONY : src/fibonacci.c.o
+
+src/fibonacci.i: src/fibonacci.c.i
+
+.PHONY : src/fibonacci.i
+
+# target to preprocess a source file
+src/fibonacci.c.i:
+	$(MAKE) -f CMakeFiles/module.dir/build.make CMakeFiles/module.dir/src/fibonacci.c.i
+.PHONY : src/fibonacci.c.i
+
+src/fibonacci.s: src/fibonacci.c.s
+
+.PHONY : src/fibonacci.s
+
+# target to generate assembly for a file
+src/fibonacci.c.s:
+	$(MAKE) -f CMakeFiles/module.dir/build.make CMakeFiles/module.dir/src/fibonacci.c.s
+.PHONY : src/fibonacci.c.s
 
 src/main.o: src/main.cpp.o
 
@@ -132,7 +159,7 @@ src/main.o: src/main.cpp.o
 
 # target to build an object file
 src/main.cpp.o:
-	$(MAKE) -f CMakeFiles/binary.dir/build.make CMakeFiles/binary.dir/src/main.cpp.o
+	$(MAKE) -f CMakeFiles/module.dir/build.make CMakeFiles/module.dir/src/main.cpp.o
 .PHONY : src/main.cpp.o
 
 src/main.i: src/main.cpp.i
@@ -141,7 +168,7 @@ src/main.i: src/main.cpp.i
 
 # target to preprocess a source file
 src/main.cpp.i:
-	$(MAKE) -f CMakeFiles/binary.dir/build.make CMakeFiles/binary.dir/src/main.cpp.i
+	$(MAKE) -f CMakeFiles/module.dir/build.make CMakeFiles/module.dir/src/main.cpp.i
 .PHONY : src/main.cpp.i
 
 src/main.s: src/main.cpp.s
@@ -150,7 +177,7 @@ src/main.s: src/main.cpp.s
 
 # target to generate assembly for a file
 src/main.cpp.s:
-	$(MAKE) -f CMakeFiles/binary.dir/build.make CMakeFiles/binary.dir/src/main.cpp.s
+	$(MAKE) -f CMakeFiles/module.dir/build.make CMakeFiles/module.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
 # Help Target
@@ -161,7 +188,10 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... binary"
+	@echo "... module"
+	@echo "... src/fibonacci.o"
+	@echo "... src/fibonacci.i"
+	@echo "... src/fibonacci.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

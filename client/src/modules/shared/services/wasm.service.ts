@@ -1,10 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Observable, BehaviorSubject, from } from 'rxjs';
 import { filter, take, mergeMap } from 'rxjs/operators';
-import * as Module from './../../../wasm/fibonacci.js';
-import '!!file-loader?name=wasm/fibonacci.wasm!./../../../wasm/fibonacci.wasm';
-
-//declare var WebAssembly;
+import * as Module from './../../../wasm/module.js';
+import '!!file-loader?name=wasm/module.wasm!./../../../wasm/module.wasm';
 
 @Injectable()
 export class WasmService {
@@ -13,7 +11,7 @@ export class WasmService {
     wasmReady = new BehaviorSubject<boolean>(false);
 
     constructor() {
-        this.instantiateWasm('wasm/fibonacci.wasm');
+        this.instantiateWasm('wasm/module.wasm');
     }
 
     private async instantiateWasm(url: string) {
