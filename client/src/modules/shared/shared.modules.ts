@@ -1,9 +1,11 @@
 import { NgModule, ModuleWithProviders } from '@angular/core';
+import { UiModule } from '../ui/ui.module';
 import { SHARED_SERVICES } from './services';
 
 @NgModule({
     declarations: [],
-    imports: [],
+    imports: [UiModule],
+    exports: [UiModule],
     bootstrap: [],
 })
 export class SharedModule {
