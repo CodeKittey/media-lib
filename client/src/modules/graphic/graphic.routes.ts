@@ -5,10 +5,10 @@ export const GRAPHIC_ROUTES: Routes = [
     {
         path: '',
         pathMatch: 'full',
-        redirectTo: 'list'
+        redirectTo: 'list',
     },
     {
         path: 'list',
-        component: GraphicListComponent
-    }
+        component: GraphicListComponent,
+    },
 ];

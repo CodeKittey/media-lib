@@ -12,6 +12,6 @@ import { SharedModule } from '../shared/shared.modules';
     declarations: [...APP_COMPONENTS],
     imports: [BrowserModule, RouterModule.forRoot(ROUTES), SharedModule.forRoot(), UiModule],
     providers: APP_SERIVES,
-    bootstrap: [RootComponent]
+    bootstrap: [RootComponent],
 })
 export class AppModule {}

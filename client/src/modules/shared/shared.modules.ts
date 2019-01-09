@@ -4,13 +4,13 @@ import { SHARED_SERVICES } from './services';
 @NgModule({
     declarations: [],
     imports: [],
-    bootstrap: []
+    bootstrap: [],
 })
 export class SharedModule {
     public static forRoot(): ModuleWithProviders {
         return {
             ngModule: SharedModule,
-            providers: [...SHARED_SERVICES]
+            providers: [...SHARED_SERVICES],
         };
     }
 }

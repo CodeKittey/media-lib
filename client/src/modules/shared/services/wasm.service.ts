@@ -28,7 +28,7 @@ export class WasmService {
             wasmBinary: binary,
             onRuntimeInitialized: () => {
                 this.wasmReady.next(true);
-            }
+            },
         };
 
         // instantiate the module
@@ -44,10 +44,10 @@ export class WasmService {
                             const result = this.module._fibonacci(input);
                             resolve(result);
                         });
-                    })
+                    }),
                 );
             }),
-            take(1)
+            take(1),
         );
     }
 }

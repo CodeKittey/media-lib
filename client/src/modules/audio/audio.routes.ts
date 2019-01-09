@@ -6,14 +6,14 @@ export const AUDIO_ROUTES: Routes = [
     {
         path: '',
         pathMatch: 'full',
-        redirectTo: 'list'
+        redirectTo: 'list',
     },
     {
         path: 'list',
-        component: AudioListComponent
+        component: AudioListComponent,
     },
     {
         path: 'list/:id',
-        component: AudioDetailComponent
-    }
+        component: AudioDetailComponent,
+    },
 ];

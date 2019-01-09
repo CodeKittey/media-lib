@@ -6,6 +6,6 @@ import { OutsideClickDirective } from './directives/outside-click.directive';
 @NgModule({
     declarations: [CardComponent, OutsideClickDirective],
     exports: [CardComponent, OutsideClickDirective],
-    imports: [CommonModule]
+    imports: [CommonModule],
 })
 export class UiModule {}
