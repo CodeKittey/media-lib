@@ -5,14 +5,14 @@ import { Observable } from 'rxjs';
 @Component({
     selector: 'app-home',
     templateUrl: 'home.component.html',
-    styleUrls: ['home.component.scss']
+    styleUrls: ['home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-    fibnum$: Observable<Number>;
+    fibonacciResultNumber$: Observable<Number>;
 
     constructor(private readonly wasmService: WasmService) {}
 
     ngOnInit(): void {
-        this.fibnum$ = this.wasmService.fibonacci(11);
+        this.fibonacciResultNumber$ = this.wasmService.fibonacci(11);
     }
 }

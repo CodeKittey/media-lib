@@ -4,7 +4,7 @@ import { BlurService } from '../../services/blur.service';
 @Component({
     selector: 'app-root',
     templateUrl: './root.component.html',
-    styleUrls: ['./root.component.scss']
+    styleUrls: ['./root.component.scss'],
 })
 export class RootComponent implements OnInit {
     isBlurActive: boolean;
